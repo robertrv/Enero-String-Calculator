@@ -4,6 +4,11 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.regex.Pattern;
 
+/**
+ * kata : https://github.com/12meses12katas/Enero-String-Calculator
+ *
+ * @author robertrv
+ */
 public class StringCalculator {
 	
 	private String delimitersRe = ",";
@@ -17,8 +22,10 @@ public class StringCalculator {
 		this.numbers = numbers;
 		
 		findValidDelimiters();
-		int result = 0;
+		
 		String[] numberParts = findNumbers();
+		
+		int result = 0;
 		List<String> negativeNumbers = new LinkedList<String>();
 		for (String numberString : numberParts) {
 			try {
